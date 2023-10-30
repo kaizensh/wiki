@@ -1,0 +1,92 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+
+site_name: kaizen.wtf
+site_url: https://kaizen.wtf
+site_description: Media, piracy, data hoarding, and more.
+site_author: kaizen
+
+repo_url: https://github.com/kaizensh/wiki
+repo_name: contribute
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+
+  palette:
+    # Palette toggle for light mode
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+  logo: assets/logo.png
+
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil-ruler-outline
+
+  favicon: assets/favicon.ico
+
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.share
+    - content.action.edit
+
+copyright: kaizen.wtf 🕱 no rights reserved
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/kaizensh/wiki
+      name: GitHub
+    - icon: fontawesome/brands/discord
+      link: https://discord.kaizen.wtf
+      name: Discord
+  generator: false
+
+plugins:
+  - search
+  - social
+  - git-revision-date-localized:
+      enable_creation_date: true
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - tables
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+      auto_title: true
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
